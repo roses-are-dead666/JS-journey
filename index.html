@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <!--Change html text-->
+    <div class="container">
+        <div class="next">
+            <p id="changeText">RANDOM TEXT HERE</p>
+            <button type="button" onclick="myFunctionText()"
+            >Change text!</button>
+        </div>
+        <!--Change image-->
+        <div class="next">
+            <button onclick="myFunctionCat()">Change to cat
+            </button>
+            <img id="myImage" src="./assets/images/dog1.jpg">
+            <button onclick="myFunctionDog()">Change to dog
+            </button>
+        </div>
+        <!--Change html fz-->
+        <div class="next">
+            <p id="changeFz">RANDOM <b>FZ</b> TEXT HERE</p>
+            <button type="button" onclick="myFunctionFz()"
+            >Click me!</button>
+        </div>
+        <!--Change style none-->
+        <div class="next">
+            <p id="changeStyle">RANDOM <b>STYLE</b> TEXT HERE</p>
+            <button type="button" onclick="myFunctionNone()"
+            >Click me!</button>
+        </div>
+        <!--Change style block-->
+        <div class="next">
+            <p>THERE IS HIDDEN TEXT BELOW</p>
+            <p id="changeStyleBlock" style="display: none;"
+            >IT IS HIDDEN TEXT</p>
+            <button type="button" onclick="myFunctionBlock()"
+            >Click me!</button>
+        </div>
+        <!--Statement-->
+        <div class="next">
+            <p>SOLVE THIS PROBLEM</p>
+            <p>10 + 10</p>
+            <p id="statement"></p>
+            <button type="button" onclick="myFunctionSum()"
+            >Click for answer!</button>
+            <script>
+                let x, y, z;
+                x = 10; y = 10; z = x + y;
+            </script>
+        </div>
+        <!--Variables-->
+        <div class="next">
+            <p>SOLVE THIS PROBLEM</p>
+            <p>10 + 10</p>
+            <p id="variable"></p>
+            <button type="button" onclick="myFunctionVar()"
+            >Click for answer!</button>
+            <script>
+                var number1 = 10;
+                var number2 = 10;
+                var total = number1 + number2;
+            </script>
+        </div>
+    </div>
+    
+
+
+    <script src="js.js"></script>
+</body>
+</html>

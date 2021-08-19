@@ -1,0 +1,46 @@
+
+html {
+    scroll-behavior: smooth;  
+}
+
+body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    color: black;  
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+}
+
+button {
+    border: 2px solid red;
+    background: #ece46a;
+    padding: 10px 5px;
+    cursor: pointer;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.next {
+    margin-bottom: 50px;
+}
+
+#myImage {
+    width: 200px;
+}
