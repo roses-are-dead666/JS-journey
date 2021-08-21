@@ -4,30 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
-
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
     <title>JavaScript</title>
+
 </head>
 <body>
     <!--Change html text-->
@@ -89,6 +71,94 @@
                 var number2 = 10;
                 var total = number1 + number2;
             </script>
+        </div>
+        <!--Const-->
+        <div class="next">
+            <p>LIST OF CARS BELOW</p>
+            <p id="const"></p>
+            <button type="button" onclick="myFunctionCon()"
+            >Click for answer!</button>
+            <script>
+                const cars = ['Saab', 'Volvo', 'BMW'];
+                cars[0] = 'Toyota';
+                cars.push('Audi');
+            </script>
+        </div>
+        <div class="next">
+            <p>CAR TYPE AND OWNER</p>
+            <p id="const2"></p>
+            <button type="button" onclick="myFunctionCon2()"
+            >Click for answer!</button>
+            <script>
+                const car = {type:'Volvo', model:'500', 
+                color:'White'};
+                car.color = 'blue';
+                car.owner = 'Josh';
+            </script>
+        </div>
+        <!--Operators-->
+        <div class="next">
+            <p>JS OPERATORS</p>
+            <p id="oper"></p>
+            <button type="button" onclick="myFunctionOper()"
+            >Click for answer!</button>
+            <script>
+                let a, b, c;
+                a = 5; b = 2; c = a%b;  
+            </script>
+            <p>OPERATOR STRINGS</p>
+            <p id="oper2"></p>
+            <button type="button" onclick="myFunctionOper2()"
+            >Click for answer!</button>
+            <script>
+                let text1 = "What a very ";
+                text1 += "nice day";
+            </script>
+        </div>
+        <!--Data Types-->
+        <div class="next">
+            <p>DATA TYPES</p>
+            <p id="data"></p>
+            <button type="button" onclick="myFunctionData()"
+            >Click for answer!</button>
+            <script>
+                let first = 5; second = 5; total = 6;
+            </script>
+        </div>
+        <!--Functions-->
+        <div class="next">
+            <p>FUNCTIONS, sum of elements</p>
+            <p id="fun"></p>
+            <p>FUNCTIONS, fahrenheit to celsius</p>
+            <p id="fToC"></p>
+        </div>
+        <!--Objects-->
+        <div class="next">
+            <p>OBJECTS</p>
+            <p id="obj"></p>
+            <p id="olzhas"></p>
+        </div>
+        <!--HTML elements-->
+        <div class="next">
+            <button onclick="document.getElementById('elem')
+            .innerHTML = Date()">The time is?</button>
+            <button onclick="this.innerHTML = Date()"
+            >The time is?</button>
+            <button onclick="displayDate()"
+            >The time is?</button>
+            <p id="elem"></p>
+        </div>
+        <!--Strings-->
+        <div class="next">
+            <p>LENGTH OF WORD IS</p>
+            <p id="str"></p>
+        </div>
+        <!--String Methods-->
+        <div class="next">
+            <p>String Methods</p>
+            <p id="meth"></p>
+            <button onclick="changeWord()">Click me!</button>
+            <p id="goF">Please go fuck yourself!</p>
         </div>
     </div>
     
