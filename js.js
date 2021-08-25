@@ -282,3 +282,141 @@ const girls = ["third", "fourth"];
 const totalDumbFucks = guys.concat(girls);
 document.getElementById("arrMerge").innerHTML = 
 totalDumbFucks;
+
+const arrSort = ["c", "d", "a"];
+document.getElementById("arrSort").innerHTML = arrSort;
+
+function myFunctionArrSort() {
+    arrSort.sort();
+    arrSort.reverse();
+    document.getElementById("arrSort").innerHTML = arrSort;
+}
+
+const arrSortNum = [100, 20, 5, -2, 666];
+document.getElementById("arrSortNum").innerHTML = arrSortNum;
+
+function myFunctionArrSortNum() {
+    arrSortNum.sort(function(a, b){return a - b});
+    document.getElementById("arrSortNum").innerHTML = arrSortNum;
+}
+
+const arrSortNumAndAlph = [100, 20, 5, -2, 666];
+document.getElementById("arrSortNumAndAlph").innerHTML = 
+arrSortNumAndAlph;
+
+function myFunctionArrSortNumerical() {
+    arrSortNumAndAlph.sort();
+    document.getElementById("arrSortNumAndAlph").innerHTML = 
+    arrSortNumAndAlph;
+}
+
+function myFunctionArrSortAlphabetical() {
+    arrSortNumAndAlph.sort(function(a, b){return a - b});
+    document.getElementById("arrSortNumAndAlph").innerHTML = 
+    arrSortNumAndAlph;
+}
+
+const arrSortRandom = [100, 20, 5, -2, 666];
+document.getElementById("arrSortRandom").innerHTML = 
+arrSortRandom;
+
+function myFunctionArrSortRandom() {
+    arrSortRandom.sort(function(a, b){return 0.5 - Math.random()});
+    document.getElementById("arrSortRandom").innerHTML = 
+    arrSortRandom;
+}
+
+const arrSortHigh = [100, 20, 5, -2, 666];
+arrSortHigh.sort(function(a, b){return b - a})
+document.getElementById("arrSortHigh").innerHTML = 
+arrSortHigh[0];
+
+const arrSortLow = [100, 20, 5, -2, 666];
+arrSortLow.sort(function(a, b){return a - b})
+document.getElementById("arrSortLow").innerHTML = 
+arrSortLow[0];
+
+const arrSortMathMax = [100, 20, 5, -6, 999];
+document.getElementById("arrSortMathMax").innerHTML = 
+myFunctionMaxArr(arrSortMathMax);
+
+function myFunctionMaxArr(arr) {
+    return Math.max.apply(null, arr);
+}
+
+const arrSortMathMin = [100, 20, 5, -6, 999];
+document.getElementById("arrSortMathMin").innerHTML = 
+myFunctionMinArr(arrSortMathMin);
+
+function myFunctionMinArr(arr) {
+    return Math.min.apply(null, arr);
+}
+
+const arrSortCarYear = [
+{type: "Volvo", year: 1995},
+{type: "Audi", year: 2021},
+{type: "Supra", year: 1990},
+];
+
+displayarrSortCarYear();
+
+function myFunctionSortCarYear() {
+    arrSortCarYear.sort(function(a, b){return a.year - b.year});
+    displayarrSortCarYear();
+}
+
+function displayarrSortCarYear() {
+    document.getElementById("arrSortCarYear").innerHTML = 
+    arrSortCarYear[0].type + " " + arrSortCarYear[0].year + "<br>" +
+    arrSortCarYear[1].type + " " + arrSortCarYear[1].year + "<br>" +
+    arrSortCarYear[2].type + " " + arrSortCarYear[2].year;
+}
+
+const arrIterNum = [10, 24, 3, 45, 5];
+
+let arrIterText = "";
+arrIterNum.forEach(myFunctionArrIter);
+document.getElementById("arrIterForEach").innerHTML = arrIterText;
+
+function myFunctionArrIter(value, index, array) {
+    arrIterText += value + "<br>";
+}
+
+const arrIterNums1 = [10, 24, 3, 45, 5];
+const arrIterNums2 = arrIterNums1.map(myFunctionArrIterMap);
+
+document.getElementById("arrIterMap").innerHTML = arrIterNums2;
+
+function myFunctionArrIterMap(value, index, array) {
+    return value * 2;
+}
+
+const arrIterFilter1 = [10, 24, 3, 45, 5];
+const arrIterFilter2 = arrIterFilter1.filter(myFunctionArrIterFilter);
+
+document.getElementById("arrIterFilter").innerHTML = arrIterFilter2;
+
+function myFunctionArrIterFilter(value, index, array) {
+    return value > 10;
+}
+
+const arrIterReduce1 = [10, 24, 3, 45, 5];
+const arrIterReduce2 = arrIterReduce1.reduce(myFunctionArrIterReduce, 13);
+
+document.getElementById("arrIterReduce").innerHTML = arrIterReduce2;
+
+function myFunctionArrIterReduce(total, value, index, array) {
+    return total + value;
+}
+
+const arrIterEvery1 = [10, 24, 3, 45, 5];
+const arrIterEvery2 = arrIterEvery1.reduce(myFunctionArrIterEvery);
+
+document.getElementById("arrIterEvery").innerHTML = arrIterEvery2;
+
+function myFunctionArrIterEvery(total, value, index, array) {
+    return value > 6;
+}
+
+
+
