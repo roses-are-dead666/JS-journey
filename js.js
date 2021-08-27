@@ -418,5 +418,194 @@ function myFunctionArrIterEvery(total, value, index, array) {
     return value > 6;
 }
 
+document.getElementById("mathRound").innerHTML = Math.round(6.6);
+document.getElementById("mathCeil").innerHTML = Math.ceil(6.4);
+document.getElementById("mathFloor").innerHTML = Math.floor(6.9);
+document.getElementById("mathTrunc").innerHTML = Math.trunc(6.9);
+document.getElementById("mathSign").innerHTML = Math.sign(6.9);
+document.getElementById("mathPow").innerHTML = Math.pow(2, 2);
+//and others
+
+function myFunctionRandomNum(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+let and1 = 5; and2 = 2;
+document.getElementById("logOper").innerHTML = 
+(and1 > 3 && and2 < 3) + "<br>" + (and1 < 3 && and2 > 3);
+
+let or1 = 6; or2 = 3;
+
+document.getElementById("logOper2").innerHTML = 
+(or1 == 5 || or2  == 5) + "<br>" + 
+(or1 == 6 || or2  == 0) + "<br>" + 
+(or1 == 0 || or2  == 3) + "<br>" + 
+(or1 == 6 || or2  == 3);
+
+let not1 = 6; not2 = 3;
+
+document.getElementById("logOper3").innerHTML = 
+!(not1 === not2) + "<br>" + 
+!(not1 >   not2);
+
+function myFunctionVote(){
+    let age = document.getElementById("ageToVote").value;
+    let voteable = (age < 18) ? "Too young":"Old enough";
+    document.getElementById("canVote").innerHTML = 
+    voteable + " to vote.";
+}
+
+if (new Date().getHours() < 18) {
+    document.getElementById("timeHi").innerHTML = "Good day!"
+}
+
+const time = new Date().getHours();
+let greetings;
+
+if (time < 18) {
+    greetings = "Good day!";
+} else {
+    greetings = "Good Evening";
+}
+document.getElementById("timeHiElse").innerHTML = greetings;
+
+const time2 = new Date().getHours();
+let greetings2;
+
+if (time2 < 10) {
+    greetings2 = "Good morning!";
+} else if (time2 < 20) {
+    greetings2 = "Good day";
+} else {
+    greetings2 = "Good evening";
+}
+
+document.getElementById("timeHiElseIf").innerHTML = greetings2;
+
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday"
+        break;
+    case 2:
+        day = "Tuesday"
+        break;
+    case 3:
+        day = "Wednesday"
+        break;
+    case 4:
+        day = "Thursday"
+        break;
+    case 5:
+        day = "Friday"
+        break;
+    case 6:
+        day = "Saturday"
+        break;
+}
+
+document.getElementById("switch").innerHTML = "Today is " + day;
+
+let message;
+switch (new Date().getDay()) {
+    case 6:
+        message = "Saturday";
+        break;
+    case 0:
+        message = "Monday";
+        break;
+    default:
+        message = "F";
+}
+
+document.getElementById("switchDef").innerHTML = message;
+
+let chillOrNah;
+switch (new Date().getDay()) {
+    case 4:
+    case 5:
+        chillOrNah = "not weekend";
+        break;
+    case 0:
+    case 6:
+        chillOrNah = "weekend";
+        break;
+    default:
+        chillOrNah = "F";
+}
+
+document.getElementById("switchCase").innerHTML = chillOrNah;
 
 
+const forCars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let carsMessage = "";
+for (let i = 0; i < forCars.length; i++) {
+    carsMessage += forCars[i] + "<br>";
+} 
+
+document.getElementById("for").innerHTML = carsMessage;
+
+let for2Text = "";
+for (let i = 0; i < 5; i++) {
+    for2Text += i + "<br>";
+}
+
+document.getElementById("for2").innerHTML = for2Text;
+
+const carsFor3 = ["BMW", "Volvo", "Saab", "Ford"];
+let i, len, textFor3;
+for (i = 0, len = carsFor3.length, textFor3 = ""; i < len; i++) {
+    textFor3 += carsFor3[i] + "<br>";
+}
+
+document.getElementById("for3").innerHTML = textFor3;
+
+
+const forInPers = {fname:"John", lname:"Doe", age:25}; 
+
+let forInTxt = "";
+for (let x in forInPers) {
+    forInTxt += forInPers[x] + " ";
+}
+document.getElementById("forIn").innerHTML = forInTxt;
+
+let whlText = "";
+let iWhl = 0;
+while (iWhl < 10) {
+    whlText += iWhl + "<br>";
+    iWhl++;
+}
+document.getElementById("while").innerHTML = whlText;
+
+let brkText = "";
+    let iBrk = 0;
+    for (;iBrk < 10; iBrk++) {
+    if (iBrk === 3) {break;}
+    brkText += "number is " + iBrk + "<br>";
+}
+document.getElementById("brk").innerHTML = brkText;
+
+let brkCont = "";
+    let iCont = 0;
+    for (;iCont < 10; iCont++) {
+    if (iCont === 3) {continue;}
+    brkCont += "number is " + iCont + "<br>";  
+}
+
+document.getElementById("brkCont").innerHTML = brkCont;
+
+const brkCars = ["BMW", "Volvo", "Saab", "Ford"];
+let labelTxt = "";
+
+list: {
+  labelTxt += brkCars[0] + "<br>"; 
+  labelTxt += brkCars[1] + "<br>"; 
+  break list;
+  labelTxt += brkCars[2] + "<br>"; 
+  labelTxt += brkCars[3] + "<br>"; 
+}
+
+document.getElementById("brkLabel").innerHTML = labelTxt;
